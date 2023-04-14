@@ -9,11 +9,6 @@ import model.DayCare;
 
 
 
-
-/**
- *
- * @author deveshi
- */
 public class ConfigureDayCare 
 {
     

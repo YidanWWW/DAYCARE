@@ -9,10 +9,6 @@ import Person.Student;
 import Person.Teacher;
 import java.util.Date;
 
-/**
- *
- * @author anuragparla
- */
 public class PersonFactory {
 
     

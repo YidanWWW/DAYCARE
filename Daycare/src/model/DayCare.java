@@ -6,10 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
-/**
- *
- * @author SanthoshMaddi
- */
+
 public class DayCare {
     
     private static DayCare dayCare;

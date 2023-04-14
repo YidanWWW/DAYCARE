@@ -8,10 +8,7 @@ import Person.Student;
 import Person.Teacher;
 import java.util.Vector;
 
-/**
- *
- * @author anuragparla
- */
+
 public class Group {
     
     private String groupName;

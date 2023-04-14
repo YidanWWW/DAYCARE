@@ -16,10 +16,7 @@ import java.util.Date;
 import java.util.List;
 import vaccine.Vaccine;
 
-/**
- *
- * @author anuragparla
- */
+
 public class DayCareModel implements DayCareModelInterface{
     
     @Override

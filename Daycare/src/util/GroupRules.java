@@ -4,10 +4,7 @@
  */
 package util;
 
-/**
- *
- * @author Yidan
- */
+
 public class GroupRules {
     public static boolean validate(int ageLower, int ageHigher, int groupSize){
         

@@ -4,10 +4,7 @@ package model;
 import java.util.Set;
 import java.util.Vector;
 
-/**
- *
- * @author anuragparla
- */
+
 
 public class Classroom {
     private Vector<Group> groups;

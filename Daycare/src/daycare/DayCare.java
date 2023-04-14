@@ -8,10 +8,7 @@ import java.text.ParseException;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
-/**
- *
- * @author santh
- */
+
 public class DayCare {
     
     private String name;

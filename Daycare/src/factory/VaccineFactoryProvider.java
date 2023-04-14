@@ -4,10 +4,7 @@
  */
 package factory;
 
-/**
- *
- * @author anuragparla
- */
+
 public class VaccineFactoryProvider {
     public static VaccineFactory getFactory(String choice) {
         if ("Vaccine".equalsIgnoreCase(choice)) {

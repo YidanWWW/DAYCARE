@@ -8,10 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A helper class with methods for read and write operations of CSV files
- * @author deveshi
- */
+
 public class FileUtil {
 	
 	

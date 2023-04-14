@@ -1,10 +1,6 @@
  package Person;
 
-/**
 
- *
- * @author anuragparla
- */
 public class Person extends AbstractPerson {
     protected int age;
     protected String firstName;

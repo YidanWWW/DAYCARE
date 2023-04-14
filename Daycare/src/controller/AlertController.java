@@ -15,10 +15,7 @@ import java.util.concurrent.TimeUnit;
 import model.DayCare;
 import vaccine.Vaccine;
 
-/**
- *
- * @author varun
- */
+
 public class AlertController {
     public static long dateOffset = (365 * 24 * 60 * 60 * 1000);
     public static void generateTeacherAlerts(Vector<Teacher> teachers){

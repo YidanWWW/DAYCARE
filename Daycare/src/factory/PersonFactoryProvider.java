@@ -4,10 +4,7 @@
  */
 package factory;
 
-/**
- *
- * @author anuragparla
- */
+
 public class PersonFactoryProvider {
     public static PersonFactory getFactory(String choice) {
         if ("Person".equalsIgnoreCase(choice)) {

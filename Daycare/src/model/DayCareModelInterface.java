@@ -9,10 +9,7 @@ import Person.Person;
 import java.util.Date;
 import vaccine.Vaccine;
 
-/**
- *
- * @author anuragparla
- */
+
 public interface DayCareModelInterface {
     Person createPersonViaCsv(String csvData);
     Person createStudentViaForm(String firstName, String lastName,int age, 

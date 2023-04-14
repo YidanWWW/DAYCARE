@@ -6,10 +6,7 @@ package factory;
 
 import vaccine.Vaccine;
 
-/**
- *
- * @author anuragparla
- */
+
 public class VaccineFactory {
 
     public Vaccine create(String csvData) {

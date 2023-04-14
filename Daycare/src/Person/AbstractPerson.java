@@ -4,10 +4,7 @@
  */
 package Person;
 
-/**
- *
- * @author anuragparla
- */
+
 public abstract class AbstractPerson {
     
     public abstract void setAge(int age);

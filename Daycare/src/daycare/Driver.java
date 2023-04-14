@@ -4,10 +4,7 @@
  */
 package daycare;
 
-/**
- *
- * @author anuragparla
- */
+
 public class Driver {
     
     

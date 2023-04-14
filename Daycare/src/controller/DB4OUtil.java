@@ -13,10 +13,7 @@ import com.db4o.ta.TransparentPersistenceSupport;
 import java.nio.file.Paths;
 import model.DayCare;
 
-/**
- *
- * @author deveshi
- */
+
 
 public class DB4OUtil {
 

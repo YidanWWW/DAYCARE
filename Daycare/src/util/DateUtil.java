@@ -8,10 +8,7 @@ import java.util.*;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
-/**
- *
- * @author hiral
- */
+
 public class DateUtil {
     
     

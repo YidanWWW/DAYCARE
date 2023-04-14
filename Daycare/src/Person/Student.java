@@ -9,10 +9,7 @@ import vaccine.Vaccine;
 import java.util.Date;
 import util.DateUtil;
 
-/**
- *
- * @author anuragparla
- */
+
 public class Student extends Person {
     private double gpa;
     private String fatherName;
