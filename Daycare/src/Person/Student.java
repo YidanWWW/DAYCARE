@@ -41,7 +41,7 @@ public class Student extends Person {
         setMotherName(parsedString[5]);
         setAddress(parsedString[6]);
         setPhoneNumber(parsedString[7]);
-        setWalkInDate(DateUtil.parseStringToDate(parsedString[8], "yyyy-mm-dd"));
+        //setWalkInDate(DateUtil.parseStringToDate(parsedString[8], "yyyy-mm-dd"));
         this.vaccineList = new Vector<>();
         
     }
