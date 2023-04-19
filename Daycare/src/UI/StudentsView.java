@@ -34,7 +34,7 @@ public class StudentsView extends javax.swing.JPanel {
         initComponents();
         this.studentsList = studentsList;
         postInit();
-        //myTM  = (DefaultTableModel) studentTable.getModel();
+        myTM  = (DefaultTableModel) studentTable.getModel();
        
     }
 
@@ -337,6 +337,7 @@ public class StudentsView extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Added Students Successfully..!", "Added Students", 1);
                 populateTable();
                 updateTotalCount();
+                
                 jPanel2.setVisible(false); 
             }
             else{

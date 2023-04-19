@@ -26,7 +26,7 @@ public class DayCare {
     }
      
      
-    private DayCare()
+    public DayCare()
     {
         
         studentsList = new Vector<>();

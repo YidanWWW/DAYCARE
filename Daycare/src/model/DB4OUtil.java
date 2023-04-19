@@ -2,17 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controller;
+package model;
 
+
+import daycare.*;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
 import com.db4o.config.EmbeddedConfiguration;
 import com.db4o.ta.TransparentPersistenceSupport;
-
 import java.nio.file.Paths;
-import model.DayCare;
-
 
 
 public class DB4OUtil {
@@ -60,25 +59,25 @@ public class DB4OUtil {
         return null;
     }
 
-    public synchronized void storeSystem(DayCare dayCare) {
+    public synchronized void storeSystem(DayCare system) {
         ObjectContainer conn = createConnection();
-        conn.store(dayCare);
+        conn.store(system);
         conn.commit();
         conn.close();
     }
     
     public DayCare retrieveSystem(){
         ObjectContainer conn = createConnection();
-        ObjectSet<DayCare> dayCareObjects = conn.query(DayCare.class); // Change to the object you want to save
-        DayCare dayCare;
-        if (dayCareObjects.isEmpty()) {
-            
-            dayCare = ConfigureDayCare.configure();  // If there's no System in the record, create a new one
+        ObjectSet<DayCare> systems = conn.query(DayCare.class); // Change to the object you want to save
+        DayCare system;
+        if (systems.isEmpty()) {
+            System.out.println("Creatin new");
+            system = new DayCare();  // If there's no System in the record, create a new one
         } else {
-            
-            dayCare = dayCareObjects.get(dayCareObjects.size() - 1);
+            System.out.println("Reading from DV");
+            system = systems.get(systems.size() - 1);
         }
         conn.close();
-        return dayCare;
+        return system;
     }
 }

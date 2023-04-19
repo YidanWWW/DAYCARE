@@ -6,7 +6,7 @@ package UI;
 
 
 import Person.Student;
-import controller.DB4OUtil;
+import model.DB4OUtil;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
@@ -39,8 +39,6 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
         selectStudentLabel = new javax.swing.JLabel();
         confirmAddToGroup = new javax.swing.JButton();
         selectStudentInput = new javax.swing.JComboBox<>();
@@ -49,25 +47,9 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setFont(new java.awt.Font("PT Sans", 3, 18)); // NOI18N
-        jLabel1.setText("Add Student to group");
+        selectStudentLabel.setText("Please Select Student");
 
-        jPanel3.setBackground(new java.awt.Color(255, 51, 51));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 166, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 9, Short.MAX_VALUE)
-        );
-
-        selectStudentLabel.setText("Select Student");
-
-        confirmAddToGroup.setBackground(new java.awt.Color(255, 102, 102));
+        confirmAddToGroup.setBackground(new java.awt.Color(204, 255, 255));
         confirmAddToGroup.setText("Confirm");
         confirmAddToGroup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,35 +71,26 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(selectStudentInput, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(53, 53, 53)
                         .addComponent(confirmAddToGroup, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(selectStudentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                        .addGap(45, 45, 45)
+                        .addComponent(selectStudentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(selectStudentInput, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(86, 86, 86)
                 .addComponent(selectStudentLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(selectStudentInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addComponent(selectStudentInput, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
                 .addComponent(confirmAddToGroup)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,6 +107,13 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void selectStudentInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectStudentInputActionPerformed
+        JComboBox cb = (JComboBox)evt.getSource();
+        String name = (String)cb.getSelectedItem();
+        cb.setSelectedItem(name);
+        cview.populateStudentTable();
+    }//GEN-LAST:event_selectStudentInputActionPerformed
+
     private void confirmAddToGroupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmAddToGroupActionPerformed
         int studentName = selectStudentInput.getSelectedIndex();
         Student s = daycare.getStudentsList().get(studentName);
@@ -144,13 +124,6 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
         ClassRoomsView.handlePostClassroomCreate(this);
         db40Util.storeSystem(daycare);
     }//GEN-LAST:event_confirmAddToGroupActionPerformed
-
-    private void selectStudentInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectStudentInputActionPerformed
-        JComboBox cb = (JComboBox)evt.getSource();
-        String name = (String)cb.getSelectedItem();
-        cb.setSelectedItem(name);
-        cview.populateStudentTable();
-    }//GEN-LAST:event_selectStudentInputActionPerformed
 
     public void setStudentsDropDown(){
         Vector<Student> students = daycare.getStudentsList();
@@ -170,9 +143,7 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmAddToGroup;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JComboBox<String> selectStudentInput;
     private javax.swing.JLabel selectStudentLabel;
     // End of variables declaration//GEN-END:variables
