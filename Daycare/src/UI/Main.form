@@ -199,9 +199,7 @@
                   <Component id="teacherMenuButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   <Component id="classroomMenuButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="alertsDialogButton" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="785" max="32767" attributes="0"/>
+                  <EmptySpace pref="897" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -213,7 +211,6 @@
                       <Component id="teacherMenuButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="classroomMenuButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                       <Component id="studentMenuButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
-                      <Component id="alertsDialogButton" alignment="3" min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="25" max="32767" attributes="0"/>
               </Group>
@@ -243,14 +240,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="studentMenuButtonActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="alertsDialogButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Alerts"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="alertsDialogButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

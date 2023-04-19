@@ -31,11 +31,12 @@ public class Main extends javax.swing.JFrame {
     /**
      * Creates new form HomePage
      */
-    public Main() {
+    public Main(DB4OUtil db4OUtil, DayCare daycare) {
         initComponents();
-        db4OUtil = DB4OUtil.getInstance();
-        dayCare =db4OUtil.retrieveSystem();
-        postInit();
+        this.db4OUtil = db4OUtil;
+        this.dayCare = daycare;
+        this.setVisible(true);
+        //postInit();
     }
 
     /**
@@ -58,7 +59,6 @@ public class Main extends javax.swing.JFrame {
         teacherMenuButton = new javax.swing.JButton();
         classroomMenuButton = new javax.swing.JButton();
         studentMenuButton = new javax.swing.JButton();
-        alertsDialogButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -169,13 +169,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        alertsDialogButton.setText("Alerts");
-        alertsDialogButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alertsDialogButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -187,9 +180,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(teacherMenuButton)
                 .addGap(43, 43, 43)
                 .addComponent(classroomMenuButton)
-                .addGap(40, 40, 40)
-                .addComponent(alertsDialogButton)
-                .addContainerGap(785, Short.MAX_VALUE))
+                .addContainerGap(897, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,8 +189,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(teacherMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(classroomMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(studentMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(alertsDialogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(studentMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -260,15 +250,6 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_studentMenuButtonActionPerformed
 
-    private void alertsDialogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alertsDialogButtonActionPerformed
-        
-        jDialog1.pack();
-        jDialog1.setSize(jDialog1.getPreferredSize().width, jDialog1.getPreferredSize().height);
-        jDialog1.setLocationRelativeTo(null);
-        populateTable();
-        jDialog1.setVisible(true);
-    }//GEN-LAST:event_alertsDialogButtonActionPerformed
-
     private void teacherMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherMenuButtonActionPerformed
         jPanel2.removeAll();
         jPanel2.setVisible(false);
@@ -293,83 +274,8 @@ public class Main extends javax.swing.JFrame {
         db4OUtil.storeSystem(dayCare);
     }//GEN-LAST:event_classroomMenuButtonActionPerformed
 
-    public void postInit()
-    {
-        //AlertController.generateTeacherAlerts(dayCare.getTeachersList());
-        jFrame1.setVisible(false);
-        jFrame1.setUndecorated(true);
-        jFrame1.setSize(1920, 1080);
-        jFrame1.setVisible(true);
-        generateTable();
-    }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Main().setVisible(true);
-            }
-        });
-    }
-    
-        public void generateTable(){
-        
-        alertDtm = (DefaultTableModel) alertsTable.getModel();
-        jScrollPane1.setVisible(false);
-        alertsTable.setAutoCreateRowSorter(true);
-        alertsTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-        alertsTable.setFillsViewportHeight(true);
-        jScrollPane1.setViewportView(alertsTable);
-        jScrollPane1.setVisible(true);   
-        populateTable();
-        
-}
-    
-    public void populateTable(){
-        
-        AlertController.generateAllALerts(dayCare);
-        alertDtm.setRowCount(0);
-        int ix = 0; // use ix as an index, i.e. id for object in table
-        AlertRecords a = AlertRecords.getInstance();
-        List<Alert> alerts= a.getAlerts();
-        for (Alert alert : alerts)
-        {
-            Object[] alertObj = {alert.getDescription()};
-            alertDtm.addRow(alertObj);
-        }
-    
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton alertsDialogButton;
     private javax.swing.JTable alertsTable;
     private javax.swing.JButton classroomMenuButton;
     private javax.swing.JDialog jDialog1;
