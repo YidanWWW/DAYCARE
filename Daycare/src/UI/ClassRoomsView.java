@@ -84,7 +84,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(319, 319, 319)
                 .addComponent(jLabel1)
-                .addContainerGap(367, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +126,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
                 .addGroup(selectClassroomPanelLayout.createSequentialGroup()
                     .addGap(44, 44, 44)
                     .addComponent(totalCount)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(824, Short.MAX_VALUE)))
         );
         selectClassroomPanelLayout.setVerticalGroup(
             selectClassroomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +140,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
                 .addGroup(selectClassroomPanelLayout.createSequentialGroup()
                     .addGap(50, 50, 50)
                     .addComponent(totalCount)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addContainerGap(45, Short.MAX_VALUE)))
         );
 
         add(selectClassroomPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, 868, -1));

@@ -48,74 +48,54 @@ public class ClassRoomDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ageFromLabel.setText("Age range");
+        ageFromLabel.setBackground(new java.awt.Color(255, 102, 0));
+        ageFromLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        ageFromLabel.setText("Age range:");
+        jPanel1.add(ageFromLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, 25));
 
-        confirmAddClassroom.setBackground(new java.awt.Color(255, 102, 102));
+        confirmAddClassroom.setBackground(new java.awt.Color(255, 102, 0));
+        confirmAddClassroom.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        confirmAddClassroom.setForeground(new java.awt.Color(255, 255, 255));
         confirmAddClassroom.setText("Confirm");
         confirmAddClassroom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmAddClassroomActionPerformed(evt);
             }
         });
+        jPanel1.add(confirmAddClassroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 295, 140, 40));
 
         errorLabel.setForeground(new java.awt.Color(255, 51, 51));
         errorLabel.setText("Only number fields are allowed");
+        jPanel1.add(errorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
+        ageGroupSelect.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         ageGroupSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         ageGroupSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ageGroupSelectActionPerformed(evt);
             }
         });
+        jPanel1.add(ageGroupSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 183, 156, 40));
 
-        jLabel2.setText("Name");
+        jLabel2.setBackground(new java.awt.Color(255, 102, 0));
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        jLabel2.setText("Name:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 50, -1));
 
         classRoomName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 classRoomNameActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(ageFromLabel)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(classRoomName, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(ageGroupSelect, javax.swing.GroupLayout.Alignment.LEADING, 0, 156, Short.MAX_VALUE))
-                    .addComponent(confirmAddClassroom)
-                    .addComponent(errorLabel))
-                .addGap(125, 125, 125))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(classRoomName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ageFromLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ageGroupSelect, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(errorLabel)
-                .addGap(18, 18, 18)
-                .addComponent(confirmAddClassroom)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        jPanel1.add(classRoomName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 156, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
