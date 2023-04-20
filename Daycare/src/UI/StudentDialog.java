@@ -31,7 +31,6 @@ public class StudentDialog extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
         txtName = new javax.swing.JTextField();
         lblName = new javax.swing.JLabel();
         lblLastName = new javax.swing.JLabel();
@@ -51,43 +50,44 @@ public class StudentDialog extends javax.swing.JDialog {
         btnAddStudent = new javax.swing.JButton();
         lblMotherName = new javax.swing.JLabel();
         txtMotherName = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        lblGpa1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("PT Sans", 3, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel1.setText("New Student");
-
-        jPanel4.setBackground(new java.awt.Color(255, 0, 51));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
-        );
+        jLabel1.setText("Add New Student");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 190, -1));
 
         txtName.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 154, 234, 40));
 
+        lblName.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblName.setText("First Name");
+        jPanel1.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
+        lblLastName.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblLastName.setText("Last Name");
+        jPanel1.add(lblLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 212, -1, -1));
 
         txtLastName.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel1.add(txtLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 243, 234, 40));
 
+        lblAge.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblAge.setText("Age");
+        jPanel1.add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 289, -1, -1));
 
         txtAge.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel1.add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 320, 234, 37));
 
         txtGpa.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtGpa.addActionListener(new java.awt.event.ActionListener() {
@@ -95,135 +95,76 @@ public class StudentDialog extends javax.swing.JDialog {
                 txtGpaActionPerformed(evt);
             }
         });
+        jPanel1.add(txtGpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 400, 234, 40));
 
+        lblGpa.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblGpa.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblGpa.setText("GPA");
+        lblGpa.setText("Weight");
+        jPanel1.add(lblGpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 375, -1, -1));
 
+        lblFatherName.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblFatherName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblFatherName.setText("Father Name");
+        jPanel1.add(lblFatherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 131, -1, -1));
 
         txtFatherName.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel1.add(txtFatherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 234, 40));
 
+        lblAddress.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblAddress.setText("Address");
+        jPanel1.add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 289, -1, -1));
+        jPanel1.add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 320, 234, 35));
 
-        lblPhoneNum.setText("Phone No");
+        lblPhoneNum.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        lblPhoneNum.setText("Contact Phone No.");
+        jPanel1.add(lblPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 375, -1, -1));
 
         txtPhoneNum.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtPhoneNumKeyReleased(evt);
             }
         });
+        jPanel1.add(txtPhoneNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 399, 234, 40));
 
         lblPhoneWarning.setForeground(new java.awt.Color(255, 0, 0));
         lblPhoneWarning.setText("Invalid Phone Number");
+        jPanel1.add(lblPhoneWarning, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 453, -1, -1));
+        jPanel1.add(lblValid, new org.netbeans.lib.awtextra.AbsoluteConstraints(698, 408, 46, 39));
 
-        lblValid.setText("jLabel2");
-
-        btnAddStudent.setBackground(new java.awt.Color(255, 102, 102));
+        btnAddStudent.setBackground(new java.awt.Color(255, 102, 0));
+        btnAddStudent.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        btnAddStudent.setForeground(new java.awt.Color(255, 255, 255));
         btnAddStudent.setText("Add Student");
         btnAddStudent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddStudentActionPerformed(evt);
             }
         });
+        jPanel1.add(btnAddStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 480, 234, 40));
 
+        lblMotherName.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblMotherName.setText("Mother Name");
+        jPanel1.add(lblMotherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 212, -1, -1));
+        jPanel1.add(txtMotherName, new org.netbeans.lib.awtextra.AbsoluteConstraints(448, 243, 234, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(211, 211, 211))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblLastName)
-                            .addComponent(lblMotherName)
-                            .addComponent(lblPhoneWarning)
-                            .addComponent(lblValid, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtMotherName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblPhoneNum, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblAddress, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblFatherName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblGpa, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblAge, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtAge, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtGpa, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtFatherName, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtAddress, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtPhoneNum, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblName)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddStudent))
-                        .addContainerGap(105, Short.MAX_VALUE))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
-                .addComponent(lblLastName)
-                .addGap(20, 20, 20)
-                .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblAge)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(lblGpa)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtGpa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblFatherName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtFatherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblMotherName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtMotherName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(lblAddress)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblPhoneNum)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtPhoneNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblValid, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPhoneWarning)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnAddStudent)
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/children.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(613, 6, -1, 98));
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 476, 234, 44));
+
+        lblGpa1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        lblGpa1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lblGpa1.setText("Registeration Date");
+        jPanel1.add(lblGpa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 451, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 780, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE)
         );
 
         pack();
@@ -240,6 +181,7 @@ public class StudentDialog extends javax.swing.JDialog {
         String address = txtAddress.getText();
         String phoneNumber = txtPhoneNum.getText();
 
+        Date date = jDateChooser1.getDate();
         if(firstName.isEmpty() || lastName.isEmpty() || age.isEmpty() || gpa.isEmpty() || fatherName.isEmpty() || motherName.isEmpty()||address.isEmpty() || phoneNumber.isEmpty())
         {
             String message = "One or more fields or missing. Please Check";
@@ -249,14 +191,14 @@ public class StudentDialog extends javax.swing.JDialog {
 
         if ( !phoneNumber.matches("\\d{10}") )
         {
-            String message = "Please enter a valid Phone number!!!";
+            String message = "Please enter a valid Phone number";
             JOptionPane.showMessageDialog(this, message, "Invalid Phone Number", 2);
             return;
         }
 
         int intAge = Integer.parseInt(age);
         Double doubleGpa = Double.parseDouble(gpa);
-        Student student = new Student(firstName,lastName, intAge, doubleGpa, fatherName, motherName, address,phoneNumber,  new Date());
+        Student student = new Student(firstName,lastName, intAge, doubleGpa, fatherName, motherName, address,phoneNumber,  date);
         studentsList.add(student);
         JOptionPane.showMessageDialog(this, "Added Student Successfully..!", "Added Student", 1);
         dispose();
@@ -282,13 +224,15 @@ public class StudentDialog extends javax.swing.JDialog {
     private Vector<Student> studentsList;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddStudent;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblFatherName;
     private javax.swing.JLabel lblGpa;
+    private javax.swing.JLabel lblGpa1;
     private javax.swing.JLabel lblLastName;
     private javax.swing.JLabel lblMotherName;
     private javax.swing.JLabel lblName;
