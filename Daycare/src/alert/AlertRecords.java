@@ -6,10 +6,7 @@ package alert;
 
 import java.util.Vector;
 
-/**
- *
- * @author varun
- */
+
 public class AlertRecords {
     private Vector<Alert> alerts = new Vector<>();
     
