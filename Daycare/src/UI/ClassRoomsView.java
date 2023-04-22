@@ -50,28 +50,25 @@ public class ClassRoomsView extends javax.swing.JPanel {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        selectClassroomPanel = new javax.swing.JPanel();
-        totalCount = new javax.swing.JLabel();
-        addTeacherButton = new javax.swing.JButton();
-        classRoomSelect = new javax.swing.JComboBox<>();
-        selectGroupPanel = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        groupsTable = new javax.swing.JTable();
-        groupsLabel = new javax.swing.JLabel();
-        addGroupButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        groupLimitLabel = new javax.swing.JLabel();
-        groupInfoPanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        studentTable = new javax.swing.JTable();
-        notePrefix = new javax.swing.JLabel();
-        noteValue = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        addStudentToGroupButton = new javax.swing.JButton();
         teacherLabel = new javax.swing.JLabel();
         teacherValueLabel = new javax.swing.JLabel();
+        notePrefix = new javax.swing.JLabel();
+        noteValue = new javax.swing.JLabel();
+        addStudentToGroupButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        studentTable = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
+        groupLimitLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        groupsTable = new javax.swing.JTable();
+        addGroupButton = new javax.swing.JButton();
+        totalCount = new javax.swing.JLabel();
+        notePrefix1 = new javax.swing.JLabel();
+        ageRange = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        classRoomSelect = new javax.swing.JComboBox<>();
+        addTeacherButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -82,82 +79,57 @@ public class ClassRoomsView extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        teacherLabel.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        teacherLabel.setForeground(new java.awt.Color(255, 102, 0));
+        teacherLabel.setText("Teacher: ");
+        add(teacherLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 66, 31));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
-        jLabel1.setText("PLEASE SELECT A CLASSROOM:");
+        teacherValueLabel.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
+        add(teacherValueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 190, 200, 31));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(363, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(286, 286, 286))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 80, Short.MAX_VALUE)
-                .addComponent(jLabel1))
-        );
+        notePrefix.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        notePrefix.setForeground(new java.awt.Color(255, 102, 0));
+        notePrefix.setText("Age range of students:");
+        add(notePrefix, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 868, -1));
+        noteValue.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        add(noteValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 230, 100, 30));
 
-        selectClassroomPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        addTeacherButton.setBackground(new java.awt.Color(255, 102, 0));
-        addTeacherButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
-        addTeacherButton.setForeground(new java.awt.Color(255, 255, 255));
-        addTeacherButton.setText("+ Add");
-        addTeacherButton.addActionListener(new java.awt.event.ActionListener() {
+        addStudentToGroupButton.setBackground(new java.awt.Color(255, 102, 0));
+        addStudentToGroupButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        addStudentToGroupButton.setForeground(new java.awt.Color(255, 255, 255));
+        addStudentToGroupButton.setText(" Add A Student");
+        addStudentToGroupButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addTeacherButtonActionPerformed(evt);
+                addStudentToGroupButtonActionPerformed(evt);
             }
         });
+        add(addStudentToGroupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 600, -1, -1));
 
-        classRoomSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        classRoomSelect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                classRoomSelectActionPerformed(evt);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        studentTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "First Name", "Last Name", "Age", "Contact Phone No."
             }
-        });
+        ));
+        jScrollPane1.setViewportView(studentTable);
 
-        javax.swing.GroupLayout selectClassroomPanelLayout = new javax.swing.GroupLayout(selectClassroomPanel);
-        selectClassroomPanel.setLayout(selectClassroomPanelLayout);
-        selectClassroomPanelLayout.setHorizontalGroup(
-            selectClassroomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(selectClassroomPanelLayout.createSequentialGroup()
-                .addGap(356, 356, 356)
-                .addComponent(classRoomSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(addTeacherButton, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(257, Short.MAX_VALUE))
-            .addGroup(selectClassroomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(selectClassroomPanelLayout.createSequentialGroup()
-                    .addGap(44, 44, 44)
-                    .addComponent(totalCount)
-                    .addContainerGap(824, Short.MAX_VALUE)))
-        );
-        selectClassroomPanelLayout.setVerticalGroup(
-            selectClassroomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(selectClassroomPanelLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
-                .addGroup(selectClassroomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(classRoomSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addTeacherButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17))
-            .addGroup(selectClassroomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(selectClassroomPanelLayout.createSequentialGroup()
-                    .addGap(50, 50, 50)
-                    .addComponent(totalCount)
-                    .addContainerGap(52, Short.MAX_VALUE)))
-        );
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 640, 298));
 
-        add(selectClassroomPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, 868, -1));
+        jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel3.setText("Maximum number of Groups for this class: ");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, -1));
 
-        selectGroupPanel.setBackground(new java.awt.Color(255, 255, 255));
+        groupLimitLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        add(groupLimitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 62, 39));
 
         jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
@@ -169,7 +141,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
                 {null}
             },
             new String [] {
-                "Name"
+                "Group Name"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -190,110 +162,54 @@ public class ClassRoomsView extends javax.swing.JPanel {
         jScrollPane2.setViewportView(groupsTable);
         groupsTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        groupsLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        groupsLabel.setText("Groups:");
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 231, 302));
 
         addGroupButton.setBackground(new java.awt.Color(255, 102, 0));
         addGroupButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         addGroupButton.setForeground(new java.awt.Color(255, 255, 255));
-        addGroupButton.setText("+ Add");
+        addGroupButton.setText(" Add A Group");
         addGroupButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addGroupButtonActionPerformed(evt);
             }
         });
+        add(addGroupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 600, -1, -1));
+        add(totalCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, 50, 46));
 
-        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel3.setText("Group limit for this class: ");
+        notePrefix1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        notePrefix1.setForeground(new java.awt.Color(255, 102, 0));
+        notePrefix1.setText("Maximum number of students:");
+        add(notePrefix1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, -1, -1));
 
-        javax.swing.GroupLayout selectGroupPanelLayout = new javax.swing.GroupLayout(selectGroupPanel);
-        selectGroupPanel.setLayout(selectGroupPanelLayout);
-        selectGroupPanelLayout.setHorizontalGroup(
-            selectGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(selectGroupPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(selectGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(selectGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(selectGroupPanelLayout.createSequentialGroup()
-                            .addComponent(groupsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(addGroupButton))
-                        .addGroup(selectGroupPanelLayout.createSequentialGroup()
-                            .addComponent(jLabel3)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(groupLimitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
-        selectGroupPanelLayout.setVerticalGroup(
-            selectGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(selectGroupPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(selectGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(groupsLabel)
-                    .addComponent(addGroupButton))
-                .addGap(18, 18, 18)
-                .addGroup(selectGroupPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(groupLimitLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
-        );
+        ageRange.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        add(ageRange, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 110, 30));
 
-        add(selectGroupPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 223, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/2.png"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 100, -1, 80));
 
-        groupInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
-        groupInfoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-
-        studentTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "First Name", "Last Name", "Age", "Contact Phone No."
-            }
-        ));
-        jScrollPane1.setViewportView(studentTable);
-
-        groupInfoPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 640, 298));
-
-        notePrefix.setForeground(new java.awt.Color(255, 51, 51));
-        notePrefix.setText("Note: Maximum number of students allowed:");
-        groupInfoPanel.add(notePrefix, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
-
-        noteValue.setText("-1");
-        groupInfoPanel.add(noteValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 53, -1));
-
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        jLabel2.setText("Students");
-        groupInfoPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
-
-        addStudentToGroupButton.setBackground(new java.awt.Color(255, 102, 0));
-        addStudentToGroupButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        addStudentToGroupButton.setForeground(new java.awt.Color(255, 255, 255));
-        addStudentToGroupButton.setText("+ Add");
-        addStudentToGroupButton.addActionListener(new java.awt.event.ActionListener() {
+        classRoomSelect.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        classRoomSelect.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        classRoomSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addStudentToGroupButtonActionPerformed(evt);
+                classRoomSelectActionPerformed(evt);
             }
         });
-        groupInfoPanel.add(addStudentToGroupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
+        add(classRoomSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 144, 36));
 
-        teacherLabel.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        teacherLabel.setForeground(new java.awt.Color(255, 51, 51));
-        teacherLabel.setText("Teacher: ");
-        groupInfoPanel.add(teacherLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 66, 31));
+        addTeacherButton.setBackground(new java.awt.Color(255, 102, 0));
+        addTeacherButton.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        addTeacherButton.setForeground(new java.awt.Color(255, 255, 255));
+        addTeacherButton.setText("Add A Classroom");
+        addTeacherButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTeacherButtonActionPerformed(evt);
+            }
+        });
+        add(addTeacherButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 176, 36));
 
-        teacherValueLabel.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
-        groupInfoPanel.add(teacherValueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 6, 250, 31));
-
-        add(groupInfoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 223, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        jLabel1.setText("PLEASE SELECT A CLASSROOM:");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addTeacherButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTeacherButtonActionPerformed
@@ -316,7 +232,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
         if(index > -1){
             cb.setSelectedIndex(cb.getSelectedIndex());
             populateGroupTable();
-            selectGroupPanel.setVisible(true);
+            //selectGroupPanel.setVisible(true);
             cb.setSelectedItem(name);
             selectedClassIndex = index;
             groupLimitLabel.setText(""+daycare.getClassRoomsList().get(cb.getSelectedIndex()).getMaxGroup());
@@ -332,7 +248,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
             int row = source.rowAtPoint( evt.getPoint() );
             int column = source.columnAtPoint( evt.getPoint() );
             String s=source.getModel().getValueAt(row, 0)+"";
-            groupInfoPanel.setVisible(true);
+            //groupInfoPanel.setVisible(true);
             selectedGroupIndex = row;
             noteValue.setText(""+daycare.getClassRoomsList().get(classRoomSelect.getSelectedIndex()).getGroups().get(row).getGroupSize());
             checkMaxLimitForGroup();
@@ -341,14 +257,13 @@ public class ClassRoomsView extends javax.swing.JPanel {
     }//GEN-LAST:event_groupsTableMouseClicked
 
     private void addStudentToGroupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addStudentToGroupButtonActionPerformed
-        AddStudentToGroupDialog as = new AddStudentToGroupDialog(daycare, this);
+        AddStudentToGroupDialog as = new AddStudentToGroupDialog(daycare, this, daycare.getClassRoomsList().get(classRoomSelect.getSelectedIndex()));
         as.setLocationRelativeTo(null);
         as.setVisible(true);
     }//GEN-LAST:event_addStudentToGroupButtonActionPerformed
     public void postInit(DayCare daycare){
         classRoomSelect.setSelectedItem(null);
-        selectGroupPanel.setVisible(false);
-        groupInfoPanel.setVisible(false);
+        
         setClassRoomDropDown(daycare.getClassRoomsList());
         classRoomSelect.setSelectedItem(null);
         groupDtm = (DefaultTableModel) groupsTable.getModel();
@@ -401,6 +316,8 @@ public class ClassRoomsView extends javax.swing.JPanel {
     }  
     public void populateGroupTable(){
         Classroom c = daycare.getClassRoomsList().get(classRoomSelect.getSelectedIndex());
+        String age = "From " + c.getAgeLower()+" to "+c.getAgeHigher();
+        ageRange.setText(age);
         Vector<Group> groups = c.getGroups();
         int n = groups.size();
         String[] options = new String[n];
@@ -439,10 +356,9 @@ public class ClassRoomsView extends javax.swing.JPanel {
     private javax.swing.JButton addGroupButton;
     private javax.swing.JButton addStudentToGroupButton;
     private javax.swing.JButton addTeacherButton;
+    private javax.swing.JLabel ageRange;
     private javax.swing.JComboBox<String> classRoomSelect;
-    private javax.swing.JPanel groupInfoPanel;
     private javax.swing.JLabel groupLimitLabel;
-    private javax.swing.JLabel groupsLabel;
     private javax.swing.JTable groupsTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -450,13 +366,11 @@ public class ClassRoomsView extends javax.swing.JPanel {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel notePrefix;
+    private javax.swing.JLabel notePrefix1;
     private javax.swing.JLabel noteValue;
-    private javax.swing.JPanel selectClassroomPanel;
-    private javax.swing.JPanel selectGroupPanel;
     private javax.swing.JTable studentTable;
     private javax.swing.JLabel teacherLabel;
     private javax.swing.JLabel teacherValueLabel;

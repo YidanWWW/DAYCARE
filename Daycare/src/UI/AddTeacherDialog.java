@@ -44,6 +44,9 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         lblGpa = new javax.swing.JLabel();
         txtCredits = new javax.swing.JTextField();
         btnAddTeacher = new javax.swing.JButton();
+        lblGpa1 = new javax.swing.JLabel();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -74,8 +77,8 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         jPanel1.add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 153, 30));
 
         lblGpa.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        lblGpa.setText("Credits");
-        jPanel1.add(lblGpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+        lblGpa.setText("Date");
+        jPanel1.add(lblGpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
         jPanel1.add(txtCredits, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 153, 29));
 
         btnAddTeacher.setBackground(new java.awt.Color(255, 153, 0));
@@ -87,22 +90,38 @@ public class AddTeacherDialog extends javax.swing.JDialog {
                 btnAddTeacherActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 153, -1));
+        jPanel1.add(btnAddTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 153, 30));
+
+        lblGpa1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        lblGpa1.setText("Credits");
+        jPanel1.add(lblGpa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+
+        jDateChooser2.setDateFormatString("y/M/d");
+        jPanel1.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 313, 150, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/teacher.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)))
                 .addGap(30, 30, 30))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(69, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
 
@@ -126,7 +145,7 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         String lastName = txtLastName.getText();
         String age = txtAge.getText();
         String credits = txtCredits.getText();
-        
+        Date date = jDateChooser2.getDate();
 
         if(firstName.isEmpty() || lastName.isEmpty() || age.isEmpty() || credits.isEmpty() )
         {
@@ -137,7 +156,7 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         
         int intAge = Integer.parseInt(age);
         int intCredits = Integer.parseInt(credits);
-        Teacher teacher = new Teacher(firstName, lastName,intAge, intCredits, new Date());
+        Teacher teacher = new Teacher(firstName, lastName,intAge, intCredits, date);
         teachersList.add(teacher);
         JOptionPane.showMessageDialog(this, "Added Teacher Successfully..!", "Added Student", 1);
         dispose();
@@ -160,11 +179,14 @@ public class AddTeacherDialog extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddTeacher;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblAge;
     private javax.swing.JLabel lblGpa;
+    private javax.swing.JLabel lblGpa1;
     private javax.swing.JLabel lblName;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtCredits;

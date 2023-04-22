@@ -44,6 +44,7 @@ public class ClassRoomDialog extends javax.swing.JDialog {
         ageGroupSelect = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         classRoomName = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -91,15 +92,20 @@ public class ClassRoomDialog extends javax.swing.JDialog {
         });
         jPanel1.add(classRoomName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 156, 40));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/classroom.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 170, 160));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -162,6 +168,7 @@ public class ClassRoomDialog extends javax.swing.JDialog {
     private javax.swing.JTextField classRoomName;
     private javax.swing.JButton confirmAddClassroom;
     private javax.swing.JLabel errorLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

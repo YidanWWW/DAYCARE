@@ -53,6 +53,7 @@ public class StudentDialog extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         lblGpa1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -129,7 +130,7 @@ public class StudentDialog extends javax.swing.JDialog {
         lblPhoneWarning.setForeground(new java.awt.Color(255, 0, 0));
         lblPhoneWarning.setText("Invalid Phone Number");
         jPanel1.add(lblPhoneWarning, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 453, -1, -1));
-        jPanel1.add(lblValid, new org.netbeans.lib.awtextra.AbsoluteConstraints(698, 408, 46, 39));
+        jPanel1.add(lblValid, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 400, 46, 39));
 
         btnAddStudent.setBackground(new java.awt.Color(255, 102, 0));
         btnAddStudent.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
@@ -140,7 +141,7 @@ public class StudentDialog extends javax.swing.JDialog {
                 btnAddStudentActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 480, 234, 40));
+        jPanel1.add(btnAddStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 480, 234, 40));
 
         lblMotherName.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblMotherName.setText("Mother Name");
@@ -149,12 +150,17 @@ public class StudentDialog extends javax.swing.JDialog {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/children.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(613, 6, -1, 98));
+
+        jDateChooser1.setDateFormatString("y/M/d");
         jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 476, 234, 44));
 
         lblGpa1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblGpa1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblGpa1.setText("Registeration Date");
         jPanel1.add(lblGpa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 451, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/phone.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 40, -1, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -227,6 +233,7 @@ public class StudentDialog extends javax.swing.JDialog {
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAge;

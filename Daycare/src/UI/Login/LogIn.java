@@ -128,6 +128,8 @@ public class LogIn extends javax.swing.JFrame {
 
             this.setVisible(false);
             new Main(this.db4OUtil,this.dayCare);
+        } else {
+            JOptionPane.showMessageDialog(null, "Please check the name or password ");
         }
 
 

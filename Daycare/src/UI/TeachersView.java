@@ -43,18 +43,16 @@ public class TeachersView extends javax.swing.JPanel {
     private void initComponents() {
 
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        jPanel1 = new javax.swing.JPanel();
-        teacherHeadingLabel = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        totalCountLabel = new javax.swing.JLabel();
-        totalCount = new javax.swing.JLabel();
-        addTeacherButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        addTeacherThroughCSVButton = new javax.swing.JButton();
-        addTeacherThroughFormButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         teacherTable = new javax.swing.JTable();
+        totalCount = new javax.swing.JLabel();
+        totalCountLabel = new javax.swing.JLabel();
+        addTeacherThroughCSVButton = new javax.swing.JButton();
+        addTeacherThroughFormButton = new javax.swing.JButton();
+        teacherHeadingLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -62,153 +60,82 @@ public class TeachersView extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        teacherHeadingLabel.setFont(new java.awt.Font("PT Sans", 3, 24)); // NOI18N
-        teacherHeadingLabel.setText("T E A C H E R S");
-
-        jPanel4.setBackground(new java.awt.Color(255, 51, 51));
-        jPanel4.setForeground(new java.awt.Color(255, 0, 0));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 169, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(teacherHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(teacherHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 722, -1));
-
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        totalCountLabel.setText("Total count:");
-
-        addTeacherButton.setText("+ Add");
-        addTeacherButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addTeacherButtonActionPerformed(evt);
-            }
-        });
-
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        addTeacherThroughCSVButton.setText("CSV file ");
-        addTeacherThroughCSVButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addTeacherThroughCSVButtonActionPerformed(evt);
-            }
-        });
-
-        addTeacherThroughFormButton.setText("Form");
-        addTeacherThroughFormButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addTeacherThroughFormButtonActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(addTeacherThroughFormButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(addTeacherThroughCSVButton, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(addTeacherThroughCSVButton)
-                .addGap(0, 0, 0)
-                .addComponent(addTeacherThroughFormButton)
-                .addContainerGap())
-        );
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(totalCountLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(addTeacherButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(44, 44, 44)
-                    .addComponent(totalCount)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(462, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addTeacherButton)
-                    .addComponent(totalCountLabel))
-                .addContainerGap(49, Short.MAX_VALUE))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(50, 50, 50)
-                    .addComponent(totalCount)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 82, 722, -1));
 
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        teacherTable.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         teacherTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "First Name", "Last Name", "Age", "Credits"
+                "Id", "First Name", "Last Name", "Age", "Credits", "Review Date"
             }
         ));
         jScrollPane1.setViewportView(teacherTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 173, 722, 163));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 722, 240));
+        add(totalCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 48, 36));
+
+        totalCountLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        totalCountLabel.setForeground(new java.awt.Color(204, 153, 0));
+        totalCountLabel.setText("Total count:");
+        add(totalCountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, -1, -1));
+
+        addTeacherThroughCSVButton.setBackground(new java.awt.Color(255, 153, 0));
+        addTeacherThroughCSVButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        addTeacherThroughCSVButton.setForeground(new java.awt.Color(255, 255, 255));
+        addTeacherThroughCSVButton.setText("Add By CSV File ");
+        addTeacherThroughCSVButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTeacherThroughCSVButtonActionPerformed(evt);
+            }
+        });
+        add(addTeacherThroughCSVButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, 140, 40));
+
+        addTeacherThroughFormButton.setBackground(new java.awt.Color(255, 153, 0));
+        addTeacherThroughFormButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
+        addTeacherThroughFormButton.setForeground(new java.awt.Color(255, 255, 255));
+        addTeacherThroughFormButton.setText("Add By Form");
+        addTeacherThroughFormButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTeacherThroughFormButtonActionPerformed(evt);
+            }
+        });
+        add(addTeacherThroughFormButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 140, 40));
+
+        teacherHeadingLabel.setFont(new java.awt.Font("PT Sans", 0, 24)); // NOI18N
+        teacherHeadingLabel.setText("T E A C H E R S");
+        add(teacherHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 256, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/teacher.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void addTeacherButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTeacherButtonActionPerformed
-
-        jPanel2.setVisible(true);
-    }//GEN-LAST:event_addTeacherButtonActionPerformed
 
     private void addTeacherThroughCSVButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTeacherThroughCSVButtonActionPerformed
         JFileChooser fileChooser = new JFileChooser();
@@ -259,7 +186,7 @@ public class TeachersView extends javax.swing.JPanel {
         int ix = 0;
         for (Teacher teacher : teachersList) {
          
-            Object[] objs = new Object[] {++ix, teacher.getFirstName(), teacher.getLastName(), teacher.getAge(), teacher.getCredits()};
+            Object[] objs = new Object[] {++ix, teacher.getFirstName(), teacher.getLastName(), teacher.getAge(), teacher.getCredits(), teacher.getReviewDate()};
             myTM.addRow(objs);
         }
         
@@ -292,13 +219,11 @@ public class TeachersView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addTeacherButton;
     private javax.swing.JButton addTeacherThroughCSVButton;
     private javax.swing.JButton addTeacherThroughFormButton;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel teacherHeadingLabel;

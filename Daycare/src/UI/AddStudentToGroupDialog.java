@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Vector;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import model.Classroom;
 import model.DayCare;
 
 
@@ -19,12 +20,14 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
     DayCare daycare;
     ClassRoomsView cview;
     DB4OUtil db40Util = DB4OUtil.getInstance();
+    Classroom classroom;
     /**
      * Creates new form AddStudentToGroupDialog
      */
-    public AddStudentToGroupDialog(DayCare daycare, ClassRoomsView cview) {
+    public AddStudentToGroupDialog(DayCare daycare, ClassRoomsView cview, Classroom classroom) {
         this.daycare = daycare;
         this.cview = cview;
+        this.classroom = classroom;
         initComponents();
         postInit();
     }
@@ -128,8 +131,12 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
         Vector<Student> students = daycare.getStudentsList();
         int n = students.size();
         String[] options = new String[n];
+        int p=0;
         for(int i = 0; i< n; i++){
-            options[i] = students.get(i).getFirstName()+" "+students.get(i).getLastName();
+            if(this.classroom.getAgeLower()<=students.get(i).getAge() && students.get(i).getAge()<this.classroom.getAgeHigher()){
+            
+                options[p++] = students.get(i).getFirstName()+" "+students.get(i).getLastName();
+            }
         }
         selectStudentInput.setModel(new javax.swing.DefaultComboBoxModel<>(options));
     }

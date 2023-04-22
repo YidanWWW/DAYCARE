@@ -1,11 +1,8 @@
 package UI;
 
-
 import alert.Alert;
 import alert.AlertController;
 import alert.AlertRecords;
-
-
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -22,12 +19,12 @@ import javax.swing.table.DefaultTableModel;
 import model.DB4OUtil;
 import model.DayCare;
 
-
 public class Main extends javax.swing.JFrame {
 
     private DayCare dayCare;
     DB4OUtil db4OUtil;
     DefaultTableModel alertDtm;
+
     /**
      * Creates new form HomePage
      */
@@ -37,8 +34,10 @@ public class Main extends javax.swing.JFrame {
         this.dayCare = daycare;
         this.setVisible(true);
         //postInit();
+        generateTable();
     }
 
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,8 +49,7 @@ public class Main extends javax.swing.JFrame {
 
         jDialog1 = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         alertsTable = new javax.swing.JTable();
         jFrame1 = new javax.swing.JFrame();
@@ -59,79 +57,56 @@ public class Main extends javax.swing.JFrame {
         teacherMenuButton = new javax.swing.JButton();
         classroomMenuButton = new javax.swing.JButton();
         studentMenuButton = new javax.swing.JButton();
+        alertsDialogButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
+        jDialog1.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setFont(new java.awt.Font("Lucida Grande", 3, 18)); // NOI18N
-        jLabel4.setText("Here is what you missed");
-
-        jPanel5.setBackground(new java.awt.Color(255, 51, 51));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 8, Short.MAX_VALUE)
-        );
+        jLabel3.setFont(new java.awt.Font("PT Sans", 0, 24)); // NOI18N
+        jLabel3.setText("A L E R T");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(340, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(321, 321, 321))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        jDialog1.getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 782, 70));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        alertsTable.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         alertsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Description"
+                "No.", "All the Alerts"
             }
         ));
         jScrollPane1.setViewportView(alertsTable);
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 667, Short.MAX_VALUE)
-        );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jDialog1.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 790, 460));
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -180,62 +155,80 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        alertsDialogButton.setBackground(new java.awt.Color(255, 102, 0));
+        alertsDialogButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
+        alertsDialogButton.setForeground(new java.awt.Color(255, 255, 255));
+        alertsDialogButton.setText("Alerts");
+        alertsDialogButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alertsDialogButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo.gif"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(399, 399, 399)
+                .addGap(66, 66, 66)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(studentMenuButton)
-                .addGap(80, 80, 80)
+                .addGap(46, 46, 46)
                 .addComponent(teacherMenuButton)
-                .addGap(78, 78, 78)
+                .addGap(52, 52, 52)
                 .addComponent(classroomMenuButton)
-                .addContainerGap(569, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(alertsDialogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(288, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(studentMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(teacherMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(classroomMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
+                    .addComponent(classroomMenuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(alertsDialogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, -10, 1440, 90));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1440, 170));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setForeground(new java.awt.Color(153, 204, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo.gif"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/daycare.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(1278, Short.MAX_VALUE)
+                .addContainerGap(1288, Short.MAX_VALUE)
                 .addComponent(jLabel6)
                 .addGap(162, 162, 162))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(349, 349, 349)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(261, 261, 261)
+                .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(209, 209, 209)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 245, Short.MAX_VALUE)
+                .addContainerGap(86, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addGap(91, 91, 91))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 78, 1440, 680));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 78, 1450, 680));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -244,14 +237,14 @@ public class Main extends javax.swing.JFrame {
         jPanel2.removeAll();
         jPanel2.setVisible(false);
         StudentsView s1 = new StudentsView(dayCare.getStudentsList());
-        s1.setSize(1480,900);
+        s1.setSize(1480, 900);
         s1.setVisible(true);
         jPanel2.setSize(jPanel2.getPreferredSize().height, jPanel2.getPreferredSize().width);
         jPanel2.add(s1);
         jPanel2.setVisible(true);
         db4OUtil.storeSystem(dayCare);
-       
-        
+
+
     }//GEN-LAST:event_studentMenuButtonActionPerformed
 
     private void teacherMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teacherMenuButtonActionPerformed
@@ -261,7 +254,7 @@ public class Main extends javax.swing.JFrame {
         t1.setSize(1480, 900);
         t1.setVisible(true);
         jPanel2.setSize(jPanel2.getPreferredSize().height, jPanel2.getPreferredSize().width);
-        jPanel2.add(t1); 
+        jPanel2.add(t1);
         jPanel2.setVisible(true);
         db4OUtil.storeSystem(dayCare);
     }//GEN-LAST:event_teacherMenuButtonActionPerformed
@@ -273,24 +266,64 @@ public class Main extends javax.swing.JFrame {
         c1.setSize(1480, 900);
         c1.setVisible(true);
         jPanel2.setSize(jPanel2.getPreferredSize().height, jPanel2.getPreferredSize().width);
-        jPanel2.add(c1); 
+        jPanel2.add(c1);
         jPanel2.setVisible(true);
         db4OUtil.storeSystem(dayCare);
     }//GEN-LAST:event_classroomMenuButtonActionPerformed
 
+    private void alertsDialogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alertsDialogButtonActionPerformed
+
+        jDialog1.pack();
+        jDialog1.setSize(jDialog1.getPreferredSize().width, jDialog1.getPreferredSize().height);
+        jDialog1.setLocationRelativeTo(null);
+        populateTable();
+        jDialog1.setVisible(true);
+        
+       
+        
+    }//GEN-LAST:event_alertsDialogButtonActionPerformed
+
+    public void generateTable() {
+
+        alertDtm = (DefaultTableModel) alertsTable.getModel();
+        jScrollPane1.setVisible(false);
+        alertsTable.setAutoCreateRowSorter(true);
+        alertsTable.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+        alertsTable.setFillsViewportHeight(true);
+        jScrollPane1.setViewportView(alertsTable);
+        jScrollPane1.setVisible(true);
+        populateTable();
+
+    }
+
+    public void populateTable() {
+
+        AlertController.generateAllALerts(dayCare);
+        alertDtm.setRowCount(0);
+        int ix = 0; // use ix as an index, i.e. id for object in table
+        AlertRecords a = AlertRecords.getInstance();
+        List<Alert> alerts = a.getAlerts();
+        int i=1;
+        for (Alert alert : alerts) {
+            Object[] alertObj = {i++,alert.getDescription()};
+            alertDtm.addRow(alertObj);
+        }
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton alertsDialogButton;
     private javax.swing.JTable alertsTable;
     private javax.swing.JButton classroomMenuButton;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton studentMenuButton;
     private javax.swing.JButton teacherMenuButton;

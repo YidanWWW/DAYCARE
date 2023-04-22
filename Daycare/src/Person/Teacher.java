@@ -27,7 +27,7 @@ public class Teacher extends Person{
         super(data);
         String[] parsedTeacherData = data.split(",");
         setCredits(Integer.parseInt(parsedTeacherData[3]));
-        setReviewDate(DateUtil.parseStringToDate(parsedTeacherData[4], "yyyy-mm-dd"));
+        setReviewDate(DateUtil.parseStringToDate(parsedTeacherData[4], "yyyy/mm/dd"));
     }
 
     public int getCredits() {
