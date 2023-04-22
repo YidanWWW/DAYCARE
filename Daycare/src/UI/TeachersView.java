@@ -134,7 +134,7 @@ public class TeachersView extends javax.swing.JPanel {
         add(teacherHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 256, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/teacher.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addTeacherThroughCSVButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTeacherThroughCSVButtonActionPerformed

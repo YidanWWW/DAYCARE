@@ -87,7 +87,7 @@ public class ImmunizationDialog extends javax.swing.JDialog {
             }
         });
 
-        labelTitle.setFont(new java.awt.Font("PT Sans", 0, 18)); // NOI18N
+        labelTitle.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         labelTitle.setText("<Student Name>   <AGE>");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
