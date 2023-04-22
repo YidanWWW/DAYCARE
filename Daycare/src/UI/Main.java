@@ -305,7 +305,7 @@ public class Main extends javax.swing.JFrame {
         List<Alert> alerts = a.getAlerts();
         int i=1;
         for (Alert alert : alerts) {
-            Object[] alertObj = {++i,alert.getDescription()};
+            Object[] alertObj = {i++,alert.getDescription()};
             alertDtm.addRow(alertObj);
         }
 
