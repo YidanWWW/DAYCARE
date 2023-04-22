@@ -24,7 +24,7 @@ public class AlertController {
         for(int i =0; i< teachers.size(); i++){
             Teacher t = teachers.get(i);
             if(isOneYearAgo(t.getReviewDate())){
-                String des = "Teacher: "+ "ID " + i +t.getFirstName()+" "+t.getLastName()+"has an Alert about annual employee review";
+                String des = "Teacher: "+  t.getFirstName()+" "+t.getLastName()+"has an Alert about annual employee review";
                 Alert alert = new Alert(des);
                 a.getAlerts().add(alert);
             }
@@ -39,7 +39,8 @@ public class AlertController {
             Student student = studentsList.get(i);
             
             if(isOneYearAgo(student.getWalkInDate())){
-                String des = "Student: "+ "ID:" +i+" adminadmin" +student.getFirstName()+" "+student.getLastName()+" has an Alert about annual registration";
+                ++i;
+                String des = "Student: "+ "  " +student.getFirstName()+" "+student.getLastName()+" has an Alert about annual registration";
                 Alert alert = new Alert(des);
                 a.getAlerts().add(alert);
             }

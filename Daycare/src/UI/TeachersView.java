@@ -99,13 +99,13 @@ public class TeachersView extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(teacherTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 722, 240));
-        add(totalCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 48, 36));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 722, 240));
+        add(totalCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, 48, 36));
 
         totalCountLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         totalCountLabel.setForeground(new java.awt.Color(204, 153, 0));
         totalCountLabel.setText("Total count:");
-        add(totalCountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, -1, -1));
+        add(totalCountLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, -1, -1));
 
         addTeacherThroughCSVButton.setBackground(new java.awt.Color(255, 153, 0));
         addTeacherThroughCSVButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
@@ -116,7 +116,7 @@ public class TeachersView extends javax.swing.JPanel {
                 addTeacherThroughCSVButtonActionPerformed(evt);
             }
         });
-        add(addTeacherThroughCSVButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, 140, 40));
+        add(addTeacherThroughCSVButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 140, 40));
 
         addTeacherThroughFormButton.setBackground(new java.awt.Color(255, 153, 0));
         addTeacherThroughFormButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
@@ -127,14 +127,14 @@ public class TeachersView extends javax.swing.JPanel {
                 addTeacherThroughFormButtonActionPerformed(evt);
             }
         });
-        add(addTeacherThroughFormButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 140, 40));
+        add(addTeacherThroughFormButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 140, 40));
 
         teacherHeadingLabel.setFont(new java.awt.Font("PT Sans", 0, 24)); // NOI18N
         teacherHeadingLabel.setText("T E A C H E R S");
-        add(teacherHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 256, 40));
+        add(teacherHeadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 256, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/teacher.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addTeacherThroughCSVButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTeacherThroughCSVButtonActionPerformed
