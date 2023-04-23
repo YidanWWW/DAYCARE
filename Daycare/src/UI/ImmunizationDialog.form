@@ -167,7 +167,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Microsoft YaHei UI" size="14" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Date"/>
+            <Property name="text" type="java.lang.String" value="Registeration Date"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnAddVaccine">
@@ -196,6 +196,9 @@
           </Properties>
         </Component>
         <Component class="com.toedter.calendar.JDateChooser" name="dateChooser">
+          <Properties>
+            <Property name="dateFormatString" type="java.lang.String" value="y/M/d"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

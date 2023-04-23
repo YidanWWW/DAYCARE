@@ -53,7 +53,7 @@ public class ClassRoomDialog extends javax.swing.JDialog {
 
         ageFromLabel.setBackground(new java.awt.Color(255, 102, 0));
         ageFromLabel.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        ageFromLabel.setText("Age range:");
+        ageFromLabel.setText("Age range: (Months)");
         jPanel1.add(ageFromLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, 25));
 
         confirmAddClassroom.setBackground(new java.awt.Color(255, 102, 0));
@@ -119,7 +119,7 @@ public class ClassRoomDialog extends javax.swing.JDialog {
             int ageHigher = Integer.parseInt(groupDes[1]);
             int groupSize = UiUtil.maxGroups[ageGroupSelect.getSelectedIndex()];
             String name = classRoomName.getText();
-            JOptionPane.showMessageDialog(this, "Classroom added successfully");
+            JOptionPane.showMessageDialog(this, "Added successfully");
             Classroom c = new Classroom(ageLower, ageHigher, groupSize, name);
             dayCare.getClassRoomsList().add(c);
             db4OUtil.storeSystem(dayCare);

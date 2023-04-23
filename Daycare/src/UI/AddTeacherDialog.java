@@ -66,7 +66,7 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         jPanel1.add(txtLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 153, 30));
 
         lblAge.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        lblAge.setText("Age");
+        lblAge.setText("Age (Years)");
         jPanel1.add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         txtAge.addActionListener(new java.awt.event.ActionListener() {
@@ -158,7 +158,7 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         int intCredits = Integer.parseInt(credits);
         Teacher teacher = new Teacher(firstName, lastName,intAge, intCredits, date);
         teachersList.add(teacher);
-        JOptionPane.showMessageDialog(this, "Added Teacher Successfully..!", "Added Student", 1);
+        JOptionPane.showMessageDialog(this, "Added Successfully", "Added Student", 1);
         dispose();
 
     }//GEN-LAST:event_btnAddTeacherActionPerformed

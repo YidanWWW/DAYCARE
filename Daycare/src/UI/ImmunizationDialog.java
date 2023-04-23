@@ -75,7 +75,7 @@ public class ImmunizationDialog extends javax.swing.JDialog {
         });
 
         jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        jLabel3.setText("Date");
+        jLabel3.setText("Registeration Date");
 
         btnAddVaccine.setBackground(new java.awt.Color(255, 102, 0));
         btnAddVaccine.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
@@ -89,6 +89,8 @@ public class ImmunizationDialog extends javax.swing.JDialog {
 
         labelTitle.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 18)); // NOI18N
         labelTitle.setText("<Student Name>   <AGE>");
+
+        dateChooser.setDateFormatString("y/M/d");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -167,7 +169,7 @@ public class ImmunizationDialog extends javax.swing.JDialog {
         String VaccineName = comboBoxVaccineName.getSelectedItem().toString();
         Dose dose = new Dose(doseNumber,date);
         addVaccine(VaccineName, dose);
-        JOptionPane.showMessageDialog(this, "Added vaccine Successfully..!", "Added Vacine", 1);
+        JOptionPane.showMessageDialog(this, "Added Successfully", "Added Vacine", 1);
         dispose();
     }//GEN-LAST:event_btnAddVaccineActionPerformed
 

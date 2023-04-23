@@ -89,7 +89,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
 
         notePrefix.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         notePrefix.setForeground(new java.awt.Color(255, 102, 0));
-        notePrefix.setText("Age range of students:");
+        notePrefix.setText("Age range of students: (Months)");
         add(notePrefix, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
         noteValue.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
@@ -116,7 +116,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "ID", "First Name", "Last Name", "Age", "Contact Phone No."
+                "ID", "First Name", "Last Name", "Age(Months)", "Contact Phone No."
             }
         ));
         jScrollPane1.setViewportView(studentTable);
@@ -182,7 +182,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
         add(notePrefix1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, -1, -1));
 
         ageRange.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        add(ageRange, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, 110, 30));
+        add(ageRange, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 110, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/2.png"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 100, -1, 80));
@@ -235,6 +235,7 @@ public class ClassRoomsView extends javax.swing.JPanel {
             //selectGroupPanel.setVisible(true);
             cb.setSelectedItem(name);
             selectedClassIndex = index;
+            addGroupButton.setVisible(true);
             groupLimitLabel.setText(""+daycare.getClassRoomsList().get(cb.getSelectedIndex()).getMaxGroup());
             
         }

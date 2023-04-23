@@ -84,7 +84,7 @@ public class StudentDialog extends javax.swing.JDialog {
 
         lblAge.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblAge.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblAge.setText("Age");
+        lblAge.setText("Age(Months)");
         jPanel1.add(lblAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 289, -1, -1));
 
         txtAge.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -206,7 +206,7 @@ public class StudentDialog extends javax.swing.JDialog {
         Double doubleGpa = Double.parseDouble(gpa);
         Student student = new Student(firstName,lastName, intAge, doubleGpa, fatherName, motherName, address,phoneNumber,  date);
         studentsList.add(student);
-        JOptionPane.showMessageDialog(this, "Added Student Successfully..!", "Added Student", 1);
+        JOptionPane.showMessageDialog(this, "Added Successfully", "Added Student", 1);
         dispose();
     }//GEN-LAST:event_btnAddStudentActionPerformed
 

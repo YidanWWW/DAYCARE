@@ -99,6 +99,7 @@ public class StudentsView extends javax.swing.JPanel {
 
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
+        studentTable.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         studentTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -251,7 +252,7 @@ public class StudentsView extends javax.swing.JPanel {
                  for(String csvString : csvStrings)
                      studentsList.add(new Student(csvString));
                  
-                JOptionPane.showMessageDialog(this, "Added Students Successfully..!", "Added Students", 1);
+                JOptionPane.showMessageDialog(this, "Added Successfully!", "Add Student", 1);
                 populateTable();
                 updateTotalCount();
                 
@@ -259,7 +260,7 @@ public class StudentsView extends javax.swing.JPanel {
             }
             else{
                
-                JOptionPane.showMessageDialog(this, "Please select csv files only!!", "CSV file required ", 2);
+                JOptionPane.showMessageDialog(this, "Please select csv files", "CSV file required ", 2);
             }
 
         }
@@ -289,7 +290,7 @@ public class StudentsView extends javax.swing.JPanel {
     int row = studentTable.getSelectedRow();
     if(row == -1)
     {
-        JOptionPane.showMessageDialog(this, "Please select a student from table!!", "Select a student", 2);
+        JOptionPane.showMessageDialog(this, "Please select a student from table", "Select a student", 2);
         return;
     }
     
@@ -320,7 +321,7 @@ public class StudentsView extends javax.swing.JPanel {
         int row = studentTable.getSelectedRow();
         if(row == -1)
         {
-            JOptionPane.showMessageDialog(this, "Please select a student from table!!", "Select a student", 2);
+            JOptionPane.showMessageDialog(this, "Please select a student from table", "Select a student", 2);
             return;
         }
         Student student = studentsList.get(row);
@@ -340,7 +341,7 @@ public class StudentsView extends javax.swing.JPanel {
                      addVaccine(student, csvString);
                     
                     
-                JOptionPane.showMessageDialog(this, "Added Vaccinations Successfully..!", "Added Students", 1);
+                JOptionPane.showMessageDialog(this, "Successfully", "Added Students", 1);
                 populateTable();
                 updateTotalCount();
                 jPanel2.setVisible(false); 
@@ -361,7 +362,7 @@ public class StudentsView extends javax.swing.JPanel {
             int row = studentTable.getSelectedRow();
             if(row == -1)
             {
-                JOptionPane.showMessageDialog(this, "Please select a student from table!!", "Select a student", 2);
+                JOptionPane.showMessageDialog(this, "Please select a student from table", "Select a student", 2);
                 return;
             }
             
@@ -433,7 +434,7 @@ public class StudentsView extends javax.swing.JPanel {
                 break;
             }
         }
-        Dose dose = new Dose(doseNumber,DateUtil.parseStringToDate(date, "yyyy-mm-dd"));
+        Dose dose = new Dose(doseNumber,DateUtil.parseStringToDate(date, "yyyy/mm/dd"));
         newVaccine.addDose(dose);
         newVaccine.setLatestImmunizationDate(dose.getDate());
         if(!vaccineExists)

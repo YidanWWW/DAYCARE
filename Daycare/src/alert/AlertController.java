@@ -24,7 +24,7 @@ public class AlertController {
         for(int i =0; i< teachers.size(); i++){
             Teacher t = teachers.get(i);
             if(isOneYearAgo(t.getReviewDate())){
-                String des = "Teacher: "+  t.getFirstName()+" "+t.getLastName()+"has an Alert about annual employee review";
+                String des = "Teacher: "+  t.getFirstName()+" "+t.getLastName()+" has an Alert about annual employee review";
                 Alert alert = new Alert(des);
                 a.getAlerts().add(alert);
             }
