@@ -44,7 +44,7 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         selectStudentLabel = new javax.swing.JLabel();
         confirmAddToGroup = new javax.swing.JButton();
-        selectStudentInput = new javax.swing.JComboBox<>();
+        selectStudentInput = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -64,7 +64,6 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
         });
 
         selectStudentInput.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        selectStudentInput.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         selectStudentInput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectStudentInputActionPerformed(evt);
@@ -111,7 +110,7 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
 
     private void selectStudentInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectStudentInputActionPerformed
         JComboBox cb = (JComboBox)evt.getSource();
-        String name = (String)cb.getSelectedItem();
+        Student name = (Student)cb.getSelectedItem();
         cb.setSelectedItem(name);
         cview.populateStudentTable();
     }//GEN-LAST:event_selectStudentInputActionPerformed
@@ -131,14 +130,16 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
         Vector<Student> students = daycare.getStudentsList();
         int n = students.size();
         String[] options = new String[n];
-        int p=0;
+        ArrayList<Student> studentlist = new ArrayList<>();
         for(int i = 0; i< n; i++){
             if(this.classroom.getAgeLower()<=students.get(i).getAge() && students.get(i).getAge()<this.classroom.getAgeHigher()){
             
-                options[p++] = students.get(i).getFirstName()+" "+students.get(i).getLastName();
+                options[i] = students.get(i).getFirstName()+" "+students.get(i).getLastName();
+                studentlist.add(students.get(i));
+                selectStudentInput.addItem(students.get(i));
             }
         }
-        selectStudentInput.setModel(new javax.swing.DefaultComboBoxModel<>(options));
+        //selectStudentInput.setModel(new javax.swing.DefaultComboBoxModel<>(options));
     }
 
     public void postInit(){
@@ -150,7 +151,7 @@ public class AddStudentToGroupDialog extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmAddToGroup;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JComboBox<String> selectStudentInput;
+    private javax.swing.JComboBox selectStudentInput;
     private javax.swing.JLabel selectStudentLabel;
     // End of variables declaration//GEN-END:variables
 }

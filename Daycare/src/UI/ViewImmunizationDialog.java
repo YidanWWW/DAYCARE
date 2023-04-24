@@ -181,7 +181,7 @@ public class ViewImmunizationDialog extends javax.swing.JDialog {
             if(selectedVaccine.equalsIgnoreCase("all") || vaccineName.equalsIgnoreCase(selectedVaccine)){
                 for(Dose dose : vaccine.getDoseDetails())
                 {
-                    String date = DateUtil.parseDateToString(dose.getDate(), "yyyy-mm-dd");
+                    String date = DateUtil.parseDateToString(dose.getDate(), "y/M/d");
                      Object[] studentObj = {vaccineName, dose.getDoseNumber(), date};
                      myTM.addRow(studentObj);
 

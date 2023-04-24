@@ -406,7 +406,8 @@ public class StudentsView extends javax.swing.JPanel {
         int ix = 0; // use ix as an index, i.e. id for object in table
         for (Student student : studentsList)
         {
-            Object[] studentObj = {++ix, student.getFirstName(), student.getLastName(), student.getAge(), student.getGpa(), student.getFatherName(), student.getMotherName(),student.getAddress(), student.getPhoneNumber(), student.getWalkInDate()};
+            String date = DateUtil.parseDateToString(student.getWalkInDate(), "y/M/d");
+            Object[] studentObj = {++ix, student.getFirstName(), student.getLastName(), student.getAge(), student.getGpa(), student.getFatherName(), student.getMotherName(),student.getAddress(), student.getPhoneNumber(), date};
             myTM.addRow(studentObj);
         }
     

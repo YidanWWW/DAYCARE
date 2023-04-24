@@ -16,6 +16,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import util.DateUtil;
 import util.FileUtil;
 
 
@@ -99,7 +100,7 @@ public class TeachersView extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(teacherTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 722, 240));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 760, 240));
         add(totalCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, 48, 36));
 
         totalCountLabel.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -116,7 +117,7 @@ public class TeachersView extends javax.swing.JPanel {
                 addTeacherThroughCSVButtonActionPerformed(evt);
             }
         });
-        add(addTeacherThroughCSVButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 140, 40));
+        add(addTeacherThroughCSVButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 470, 160, 40));
 
         addTeacherThroughFormButton.setBackground(new java.awt.Color(255, 153, 0));
         addTeacherThroughFormButton.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
@@ -151,14 +152,14 @@ public class TeachersView extends javax.swing.JPanel {
                  for(String csvString : csvStrings)
                      teachersList.add(new Teacher(csvString));
                  
-                 JOptionPane.showMessageDialog(this, "Added Teachers Successfully..!", "Added Teachers", 1);
+                 JOptionPane.showMessageDialog(this, "Added Successfully!", "Added Teachers", 1);
                   populateTable();
                   updateTotalCount();
                   jPanel2.setVisible(false); 
             }
             else{
                
-                JOptionPane.showMessageDialog(this, "Please select csv files only!!", "CSV file required ", 2);
+                JOptionPane.showMessageDialog(this, "Please select csv files only", "CSV file required ", 2);
             }
         }
     }//GEN-LAST:event_addTeacherThroughCSVButtonActionPerformed
@@ -186,7 +187,8 @@ public class TeachersView extends javax.swing.JPanel {
         int ix = 0;
         for (Teacher teacher : teachersList) {
          
-            Object[] objs = new Object[] {++ix, teacher.getFirstName(), teacher.getLastName(), teacher.getAge(), teacher.getCredits(), teacher.getReviewDate()};
+            String date = DateUtil.parseDateToString(teacher.getReviewDate(), "y/M/d");
+            Object[] objs = new Object[] {++ix, teacher.getFirstName(), teacher.getLastName(), teacher.getAge(), teacher.getCredits(), date};
             myTM.addRow(objs);
         }
         

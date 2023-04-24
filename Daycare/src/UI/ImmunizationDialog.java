@@ -75,7 +75,7 @@ public class ImmunizationDialog extends javax.swing.JDialog {
         });
 
         jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        jLabel3.setText("Registeration Date");
+        jLabel3.setText("Date");
 
         btnAddVaccine.setBackground(new java.awt.Color(255, 102, 0));
         btnAddVaccine.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N

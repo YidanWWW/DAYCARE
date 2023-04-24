@@ -77,8 +77,8 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         jPanel1.add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 153, 30));
 
         lblGpa.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
-        lblGpa.setText("Date");
-        jPanel1.add(lblGpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        lblGpa.setText("Review Date");
+        jPanel1.add(lblGpa, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
         jPanel1.add(txtCredits, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 153, 29));
 
         btnAddTeacher.setBackground(new java.awt.Color(255, 153, 0));
@@ -90,7 +90,7 @@ public class AddTeacherDialog extends javax.swing.JDialog {
                 btnAddTeacherActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 153, 30));
+        jPanel1.add(btnAddTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 153, 30));
 
         lblGpa1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         lblGpa1.setText("Credits");
@@ -106,13 +106,10 @@ public class AddTeacherDialog extends javax.swing.JDialog {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(30, 30, 30))
         );
         jPanel2Layout.setVerticalGroup(
@@ -121,8 +118,8 @@ public class AddTeacherDialog extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
