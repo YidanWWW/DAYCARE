@@ -13,7 +13,7 @@ import model.DayCare;
 
 /**
  *
- * @author 13161
+ * @author Yidan
  */
 public class LogIn extends javax.swing.JFrame {
 
