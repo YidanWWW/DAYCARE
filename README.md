@@ -1,6 +1,6 @@
-# DAYCARE-CSYE6200 FINAL PROJECT
+# Daycare Management Project
 
-Yidan WANG, 002610125
+
 
 ## Basic Information
 1. JDK18 or above
